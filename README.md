@@ -1,84 +1,129 @@
-# Counter App
+# Counter App 
 
-A simple **Counter Application** built with **Angular** and **TypeScript**.  
-This app demonstrates the basic usage of Angular components, data binding, and event handling.
-
----
-
-## 🚀 Features
-
-- Increment and decrement counter values
-- Reset counter to default value
-- Responsive UI with Angular styling
-- Built with TypeScript for type safety
+A minimal counter application built with **Angular** and **TypeScript**. It demonstrates components, one‑way/two‑way data binding, and event handling with a tiny, production‑ready setup.
 
 ---
 
-## 🛠️ Tech Stack
+## Overview
 
-- **Angular** (latest version)
-- **TypeScript**
-- **HTML5 / CSS3**
+- Increment, decrement, and reset the counter
+- Clean, modular component structure
+- Works out of the box with Angular CLI
 
 ---
 
-## 📦 Installation
+## Prerequisites
 
-1. Clone the repository:
+- **Node.js** (LTS recommended)
+- **Angular CLI** installed globally
 
-   ```bash
-   git clone https://github.com/your-username/counter-app.git
-Navigate into the project folder:
+```bash
+npm install -g @angular/cli
+```
 
-bash
-Copy code
+---
+
+## Quick Start
+
+Clone the repo, install dependencies, and run the dev server:
+
+```bash
+git clone https://github.com/your-username/counter-app.git
 cd counter-app
-Install dependencies:
-
-bash
-Copy code
 npm install
-▶️ Run the Application
-To start the development server:
-
-bash
-Copy code
 ng serve
-Then open your browser at:
+```
 
-arduino
-Copy code
+Open the app at:
+
+```
 http://localhost:4200/
-📂 Project Structure
-pgsql
-Copy code
+```
+
+---
+
+## Project Structure
+
+```text
 counter-app/
-│── src/
-│   ├── app/
-│   │   ├── counter/
-│   │   │   ├── counter.component.ts
-│   │   │   ├── counter.component.html
-│   │   │   └── counter.component.css
-│   │   └── app.module.ts
-│   ├── assets/
-│   ├── index.html
-│   └── main.ts
-│
-│── angular.json
-│── package.json
-│── README.md
-🖼️ Usage
-Increment → Click the + button
+├─ src/
+│  ├─ app/
+│  │  ├─ counter/
+│  │  │  ├─ counter.component.ts
+│  │  │  ├─ counter.component.html
+│  │  │  └─ counter.component.css
+│  │  └─ app.module.ts
+│  ├─ assets/
+│  ├─ index.html
+│  └─ main.ts
+├─ angular.json
+├─ package.json
+└─ README.md
+```
 
-Decrement → Click the - button
+---
 
-Reset → Click the Reset button
+## Usage
 
-📸 Demo (Optional)
-If you want, you can add a screenshot or GIF of your app here:
+- **Increment** → click the `+` button  
+- **Decrement** → click the `-` button  
+- **Reset** → click **Reset**
 
+If you use an input for the starting value, ensure it's bound via `[(ngModel)]` or a reactive form control.
 
-![Counter App Screenshot](./screenshot.png)
-🤝 Contributing
-Contributions, issues, and feature requests are welcome!
-Feel free to fork this repo and submit a pull request.
+---
+
+## Scripts
+
+Common NPM scripts (may vary by your setup):
+
+```bash
+# start dev server
+npm start        # alias for: ng serve
+
+# production build
+npm run build    # alias for: ng build --configuration production
+
+# unit tests (if configured)
+npm test
+
+# lint (if configured)
+npm run lint
+```
+
+---
+
+## Build (Production)
+
+```bash
+ng build --configuration production
+```
+
+Bundles will be output to `dist/`. Serve the built files with any static server.
+
+---
+
+## Troubleshooting
+
+- If the CLI command `ng` is not found, reinstall Angular CLI globally:
+  ```bash
+  npm install -g @angular/cli
+  ```
+- If install fails, clear cache and retry:
+  ```bash
+  npm cache verify
+  rm -rf node_modules package-lock.json
+  npm install
+  ```
+
+---
+
+## Contributing
+
+Issues and PRs are welcome. Please open an issue to discuss major changes first.
+
+---
+
+## License
+
+MIT
