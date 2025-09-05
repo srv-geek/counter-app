@@ -4,48 +4,70 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-    max-width: 400px;
-    margin: 40px auto;
+    min-height: 65vh;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    border-radius: 20px;
+    padding: 50px 30px;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    margin: 50px auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.counter-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.counter-subtitle {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 25px;
 }
 
 /* Counter text */
 .counter-value {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
-    color: #2d3748;
-    margin-bottom: 30px;
+    color: #2b6cb0;
+    margin-bottom: 35px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .counter-value:hover {
-    transform: scale(1.1);
-    color: #1a202c;
+    transform: scale(1.15);
+    color: #1a365d;
 }
 
 /* Button group */
 .button-group {
     display: flex;
-    gap: 15px;
+    gap: 18px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 /* Modern buttons */
 .btn {
-    padding: 12px 20px;
+    padding: 14px 22px;
     font-size: 1rem;
     font-weight: 600;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.25s ease;
-    min-width: 120px;
+    min-width: 130px;
     text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Specific button colors */
@@ -56,7 +78,7 @@
 
 .increment:hover {
     background: #2f855a;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .decrement {
@@ -66,7 +88,7 @@
 
 .decrement:hover {
     background: #c05621;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .reset {
@@ -76,5 +98,5 @@
 
 .reset:hover {
     background: #c53030;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }

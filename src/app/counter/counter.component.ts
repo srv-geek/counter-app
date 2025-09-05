@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -7,17 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './counter.component.css'
 })
 export class CounterComponent {
-  counter: number = 0;
+  counter = signal(0);
 
   increment() {
-    this.counter = this.counter + 1;
+    this.counter.update(v => v + 1);
   }
 
   decrement() {
-    this.counter = this.counter - 1;
+    this.counter.update(v => v > 0 ? v - 1 : 0);
   }
 
+
   reset() {
-    this.counter = 0;
+    this.counter.set(0);
   }
 }
